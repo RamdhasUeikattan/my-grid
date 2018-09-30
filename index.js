@@ -21,14 +21,14 @@ export class App extends Component {
 			// { field: 'Verified', headerText: 'Verified', width: 150 }
 			{
 				headerText: 'Employee Image', textAlign: 'center',
-				width: 180, cellRender: CellRender
+				width: 180, cellRender: ImageCellRender
 			},
 			{ field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'right', width: 125 },
 			{ field: 'FirstName', headerText: 'Name', width: 120 },
-			{ field: 'Title', headerText: 'Title', width: 170 },
+			{ field: 'Title', headerText: 'Title', width: 130 },
 			{
 				field: 'HireDate', headerText: 'Hire Date', textAlign: 'right',
-				width: 135
+				width: 135, cellRender: DateCellRender 
 			},
 			{ field: 'ReportsTo', headerText: 'Reports To', width: 120, textAlign: 'right' }
 		];
@@ -44,13 +44,22 @@ export class App extends Component {
 }
 ReactDOM.render(<App />, document.getElementById('index'));
 
-function CellRender(props) {
+function ImageCellRender(props) {
 	let EmployeeID = getObject('EmployeeID', props.cell.row.data);
 	return (
 		<td className='my-cell my-center-align'>
 			<div className='image'>
 				<img src={`dist/images/${EmployeeID}.png`} alt={`${EmployeeID}`} />
 			</div> 
+		</td>
+	);
+}
+
+function DateCellRender(props) {
+	let HireDate = getObject('HireDate', props.cell.row.data);
+	return (
+		<td className='my-cell my-right-align'>
+			{HireDate.toLocaleDateString()}
 		</td>
 	);
 }
