@@ -1,0 +1,22 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+.my-altrow {
+  background-color: aliceblue;
+}
+
+.my-grid .my-cell {
+  vertical-align: middle;
+}
+.my-grid .my-right-align {
+  text-align: right;
+}
+.my-grid .my-left-align {
+  text-align: left;
+}
+.my-grid .my-center-align {
+  text-align: center;
+}
+.my-grid .my-justfy-align {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */

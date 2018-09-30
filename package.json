@@ -1,0 +1,35 @@
+{
+  "name": "react-enterprize-application",
+  "version": "1.0.0",
+  "description": "react app",
+  "main": "index.js",
+  "scripts": {
+    "styles": "sass ./styles/style.scss ./dist/style.css",
+    "test": "gulp test",
+    "build": "webpack --mode development && npm run dev",
+    "dev": "node ./node_modules/lite-server/bin/lite-server"
+  },
+  "keywords": [
+    "reactapp"
+  ],
+  "author": "ramdhas",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "eslint-plugin-react": "^7.11.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "sass": "^1.14.1",
+    "lite-server": "^2.2.2"
+  }
+}
